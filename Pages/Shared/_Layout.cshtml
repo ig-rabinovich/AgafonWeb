@@ -11,33 +11,63 @@
 </head>
 <body>
     <div class="container sticky-top">
-        <header>
-            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-                <div class="container">
-                    <a class="navbar-brand" asp-area="" asp-page="/Index">КМД помощник</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-end">
-                        <ul class="nav">
-                            <li class="nav-item"><a class="nav-link" asp-area="" asp-page="/#">Болты</a>
-                            <li class="nav-item"><a class="nav-link" asp-area="" asp-page="/#">Сварка</a>
-                            <li class="nav-item"><a class="nav-link" asp-area="" asp-page="/#">Расчет узлов</a>
-                            <li class="nav-item"><a class="nav-link" asp-area="" asp-page="/#">Документация</a>
-                            <li class="nav-item"><a class="nav-link" asp-area="" asp-page="/Privacy">О проекте</a>
-                        </ul>
-                    </div>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-page="/Index">КМД помощник</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-end">
+                    <ul class="nav nav-pills">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" asp-page="/#" role="button" aria-expanded="false">Болты</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" asp-page="/#">Размещение болтов</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" asp-page="/#">Место под ключ</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" asp-page="/#">Расчёт болтов</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" asp-page="/#" role="button" aria-expanded="false">Сварка</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" asp-page="/#">Расчёт швов по СП</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" asp-page="/#">Расчёты швов по пособию к СП</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" asp-page="/#">Расчёт поясных швов</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" asp-page="/#" role="button" aria-expanded="false">Расчёт узлов</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" asp-page="/#">Узлы для балок</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" asp-page="/#">Узлы для связей</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" asp-page="/#">Стыковые узлы</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" asp-page="/#">Фланцевый узел</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" asp-page="/#">База колонны</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" asp-page="/#">Документация</a>
+                        <li class="nav-item"><a class="nav-link" asp-page="/Privacy">О проекте</a>
+                        <li class="nav-item"><a class="nav-link" asp-page="/Experiment">эксперименты</a>
+                    </ul>
                 </div>
-            </nav>
-        </header>
+            </div>
+        </nav>
     </div>
 
     <div class="container">
-        <div class="row gy-5">
+        <div class="row">
             <div class="col-12">
                 <div class="p-3 border bg-light">
-                    <main role="main" class="pb-3">
+                    <main role="main">
                         @RenderBody()
                     </main>
                 </div>
@@ -46,10 +76,8 @@
     </div>
 
     <div class="container">
-        <footer class="border-top text-muted d-flex flex-wrap justify-content-between align-items-center py-3 my-4">
-            <div class="container">
-                &copy; 2022 - КМД помощник - <a asp-area="" asp-page="/Privacy">Privacy</a>
-            </div>
+        <footer class="border-top text-muted py-3 my-4 d-flex flex-wrap justify-content-end">
+            &copy; 2022 - КМД помощник - <a asp-page="/Privacy">&nbspО проекте</a>
         </footer>
     </div>
 

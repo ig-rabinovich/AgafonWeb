@@ -1,0 +1,22 @@
+﻿@page
+@model AgafonWeb.Pages.ExperimentModel
+@{
+    ViewData["Title"] = "Экспериментальная страница";
+}
+<h1>Это примеры кода</h1>
+<br />
+<br />
+<h2>Найдём сумму</h2>
+<form method="post">
+    <label for="sum1">Первое слагаемое</label>
+    <input type="number" name="sum1" /><br />
+    <label for="sum2">Второе слагаемое</label>
+    <input type="number" name="sum2" /><br />
+    <input type="submit" value="Считать" />
+</form>
+<h2>@Model.MessageResult</h2>
+<select>
+    <option disabled>Выбрать:</option>
+    <option>Пункт 1</option>
+    <option>Пункт 2</option>
+</select>
